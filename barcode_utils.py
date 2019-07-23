@@ -60,13 +60,13 @@ def decode(bar_widths):
                 code += '1' * val if (j+1) % 2 ==0 else '0'*val
             mode_dict = first_six_digits.get(count)
 
-            print(code)
+            #print(code)
             print(mode_dict.get(code))
         else:
             code = ""
             for j, val in enumerate(widths):
                 code += '0' * val if (j + 1) % 2 == 0 else '1' * val
-            print(code)
+            #print(code)
             print(R_dict.get(code))
 
 

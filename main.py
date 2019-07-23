@@ -17,7 +17,6 @@ def grab_contours(cnts):
     else:
         raise Exception(("Contours tuple must have length 2 or 3"))
 
-    # return the actual contours array
     return cnts
 
 def scan():
@@ -82,7 +81,6 @@ def scan():
 
     """Creating ideal binary image"""
     rows_count,cols_count = bin_img.shape
-
     for i in range(cols_count):
         col_vals = bin_img[:,i]
         ct_vals = Counter(col_vals)
@@ -102,6 +100,7 @@ def scan():
             count=1
             prev_val = val
 
+    """Calculating bar widths relative to the number pixels of the first bar"""
     width_list = list(map(lambda x: int(math.ceil(x/width_list[2])),width_list))
     decode(width_list)
 
